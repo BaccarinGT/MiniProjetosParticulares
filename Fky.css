@@ -145,6 +145,7 @@
  }
 
  .tabela-container {
+     max-height: 430px;
      overflow-x: auto;
  }
 
@@ -236,11 +237,13 @@
  }
 
  .carrosel {
+    justify-content: center;
+    max-width: 100%;
      display: flex;
-     gap: 25px;
+     gap: 40px;
      overflow-x: auto;
-     padding: 10px 5px 20px;
-     scroll-behavior: smooth;
+     flex-shrink: 0;
+     
  }
 
  .hotel-card img {
