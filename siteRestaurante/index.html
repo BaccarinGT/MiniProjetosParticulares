@@ -7,18 +7,220 @@
     <title>Restaurante Pedra Do Altar</title>
 
     <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Fonte principal do site */
+body {
+    background-color: #F5F4F2;
+     margin: 0;
+     padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* descrição e preços */
+p, span {
+    color: #424243;
+}
+
+/* Fonte dos títulos */
+h1, h2, h3 {
+    color: #BAB095;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.menu{
+    background-color: #BAA88D;
+}
+
     </style>
 </head>
 
 <body>
-    <header class="rodape">
+
+
+    <header class="menu">
+        <nav>
+        <button><a href="#home">HOME</a></button>
+        <button><a href="#cardápio">CARDÁPIO</a></button>
+        <button><a href="#doces">DOCES</a></button>
+        <button><a href="">PEDIDO</a></button>
+        <button><a href="">CONHEÇA</a></button>
+        </nav>
     </header>
-    <section class="Apresentação">
+     
+    <section  id="home">
     </section>
-    <section class="cardapio">
+
+
+    <section class="apresentação">
+
+        <div class="container">
+            <img src="img/Sobremesa/BANOFFEE TRIFLES.jpg" alt="Doce">
+            <img src="img/Cardapio/Camidas/download (1).jpg" alt="Prato">
+        </div>
+        <div>
+            <h1>E muito mais...</h1>
+            <p><button><a href="">Conheça o nosso cardápio</a></button></p>
+        </div>
 
     </section>
-    <section class="formulario">
+
+
+    <section class="about">
+        <div class="about-text">
+            <h1>Intereçado em nossos serviços?</h1>
+            <p><button><a href="">Conheça</a></button></p>
+        </div>
+    </section>
+
+
+    <section id="cardápio" class="seção cardápio">
+        <div>
+            <table class="cardápio-container">
+                <tr>
+                    <td>
+
+                        <div class="imagem">
+                            <img src="img/Cardapio/Camidas/download (1).jpg" alt="prato1">
+                        </div>
+                        <div class="descrição">
+                            <h3>Filé Mignon ao Molho Cremoso</h3>
+                            <p>Filé bovino grelhado ao ponto, servido sobre uma delicada cama de purê de batatas
+                                cremoso, acompanhado de aspargos frescos e brócolis ao vapor. Finalizado com molho
+                                especial de ervas e especiarias.</p>
+                            <span>R$ 79,90</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="imagem">
+                            <img src="img/Cardapio/Camidas/download.jpg" alt="prato2">
+                        </div>
+                        <div class="descrição">
+                            <h3>Chicken Alfredo Crocante</h3>
+                            <p>Filé de frango empanado e crocante, acompanhado de fettuccine envolvido em molho Alfredo
+                                à base de creme de leite e parmesão. Finalizado com ervas frescas e um toque especial de
+                                queijo.</p>
+                            <span>R$ 64,90</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="imagem">
+                            <img src="img/Cardapio/Camidas/Why serve pasta the ordinary way when you can turn it into a stunning bird’s nest creation_.jpg"
+                                alt="prato3">
+                        </div>
+                        <div class="descrição">
+                            <h3>Spaghetti ao Pesto Mediterrâneo</h3>
+                            <p>Spaghetti preparado com molho pesto artesanal de manjericão, azeite e especiarias,
+                                acompanhado de tomates-cereja frescos e folhas de manjericão. Uma combinação leve,
+                                aromática e equilibrada.</p>
+                            <span>R$ 49,90</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="imagem">
+                            <img src="img/Cardapio/Camidas/Crockpot Steak and Potatoes with Savory Gravy.jpg"
+                                alt=" prato4">
+                        </div>
+
+                        <div class="descrição">
+                            <h3>Steak ao Molho Especial</h3>
+                            <p>Suculento corte bovino grelhado, servido com batatas douradas e temperadas com ervas
+                                aromáticas. Acompanha molho cremoso especial de pimenta e ervas, proporcionando uma
+                                combinação marcante de sabores.
+
+                            </p>
+                            <span>R$ 84,90</span>
+                        </div>
+                    </td>
+
+                </tr>
+            </table>
+
+            <h1>Doces</h1>
+
+            <table class="cardápio-container" id="doces">
+
+                <td>
+                    <div class="imagem">
+                        <img src="img/Sobremesa/17 Chocolate Hazelnut Cake Ideas Nutty Decadent Layers.jpg"
+                            alt="prato1">
+                    </div>
+                    <div class="descrição">
+                        <h3>Brownie de Chocolate com Avelãs</h3>
+                        <p>Brownie artesanal de chocolate com textura macia e interior úmido, coberto com ganache
+                            cremosa de chocolate meio amargo e finalizado com pedaços crocantes de avelãs.
+
+                        </p>
+                        <span>R$ 24,90</span>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="imagem">
+                        <img src="img/Sobremesa/BANOFFEE TRIFLES.jpg" alt="prato2">
+                    </div>
+                    <div class="descrição">
+                        <h3>Banoffee Cremosa</h3>
+                        <p>
+                            Sobremesa em camadas com banana fresca, doce de leite artesanal, creme suave e farofa
+                            crocante de biscoito. Finalizada com chantilly e rodelas de banana.
+                        </p>
+                        <span>R$ 22,90</span>
+                    </div>
+                </td>
+                <td>
+                    <img src="img/Sobremesa/download (4).jpg" alt="prato3">
+                    <div class="descrição">
+                        <h3>Pudim Tradicional com Frutas Vermelhas</h3>
+                        <p>
+                            Pudim artesanal de leite condensado, com textura extremamente cremosa e calda de caramelo
+                            dourado. Decorado com frutas vermelhas frescas e um toque de hortelã.
+                        </p>
+                        <span>R$ 19,90</span>
+                    </div>
+                </td>
+                <td>
+                    <img src="img/Sobremesa/download (5).jpg" alt="prato4">
+                    <div class="descrição">
+                        <h3>Cheesecake de Frutas Vermelhas</h3>
+                        <p> Cheesecake de textura delicada e cremosa, sobre uma base crocante de biscoito amanteigado.
+                            Coberto com geleia artesanal de frutas vermelhas e acompanhado de morangos e mirtilos
+                            frescos.
+
+                        </p>
+                        <span>R$ 26,90</span>
+                    </div>
+                </td>
+                <td>
+                    <img src="img/Sobremesa/Molten Chocolate Lava Cake 🍫🍨.jpg" alt="prato5">
+                    <div class="descrição">
+                        <h3>Petit Gâteau de Chocolate</h3>
+                        <p> Bolo individual de chocolate com exterior delicadamente assado e interior cremoso de
+                            chocolate derretido. Servido com uma bola de sorvete de creme, morangos frescos e calda de
+                            chocolate.
+
+                        </p>
+                        <span>R$ 29,90</span>
+                    </div>
+                </td>
+            </table>
+        </div>
+    </section>
+
+    <section>
+
     </section>
 
 </body>
