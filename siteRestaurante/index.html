@@ -59,7 +59,7 @@
             border-radius: 20px;
             cursor: pointer;
             border: none;
-            transition: background-color 0.4s ease;
+            transition: background-color 1.0s ease;
         }
 
         .menu button:hover {
@@ -81,7 +81,7 @@
             background-color: #F5F4F2;
             display: flex;
             width: 100%;
-            height: 100%;
+            height: 900px;
         }
 
         .container-imagem {
@@ -126,24 +126,128 @@
             text-decoration: none;
             border-radius: 999px;
         }
+
+        .about {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url(img/Banners/Bannerfundo.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            height: 500px;
+            width: 100%;
+        }
+
+        .about-text {
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            justify-items: center;
+        }
+
+        .about-text h1 {
+            font-size: 35px;
+        }
+
+        .about-text button {
+            background-color: #BAA88D;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.9s ease;
+        }
+
+        .about-text button:hover {
+            background-color: #80664E;
+        }
+
+        .about-text a {
+            text-decoration: none;
+            color: #F5F4F2;
+        }
+
+
+        .seção-cardápio h1 {
+            font-size: 30px;
+            align-content: center;
+            justify-self: center;
+            height: 200px;
+        }
+
+        .cardápio-container {
+            width: 75%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .cardápio-container tr {
+            display: block;
+            margin-bottom: 35px;
+        }
+
+        .cardápio-container td {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            width: 100%;
+        }
+
+        .seção-cardápio>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cardápio-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .cardápio-container button {
+            background-color: #BAA88D;
+            padding: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.9s ease;
+        }
+
+        .cardápio-container button:hover {
+            background-color: #80664E;
+        }
+
+        .cardápio-container a {
+            text-decoration: none;
+            color: #F5F4F2;
+        }
+
+
+        .descrição {
+            flex: 1;
+            font-size: 20px;
+        }
     </style>
 </head>
 
-<body>
-
+<body id="home">
 
     <header class="menu">
         <nav class="menu-button">
             <button><a href="#home">HOME</a></button>
             <button><a href="#cardápio">CARDÁPIO</a></button>
             <button><a href="#doces">DOCES</a></button>
-            <button><a href="">PEDIDO</a></button>
-            <button><a href="">CONHEÇA</a></button>
+            <button><a href="#drinks">DRINKS</a></button>
+            <button><a href="paginas/meusPedidos/index.html">PEDIDO</a></button>
+            <button><a href="paginas/nosConheça/index.html">CONHEÇA</a></button>
         </nav>
     </header>
 
-    <section id="home">
-    </section>
+
 
 
     <section class="apresentação">
@@ -170,8 +274,11 @@
     </section>
 
 
-    <section id="cardápio" class="seção cardápio">
+    <section id="cardápio" class="seção-cardápio">
         <div>
+
+            <h1>--Prato Principal--</h1>
+
             <table class="cardápio-container">
                 <tr>
                     <td>
@@ -185,8 +292,12 @@
                                 cremoso, acompanhado de aspargos frescos e brócolis ao vapor. Finalizado com molho
                                 especial de ervas e especiarias.</p>
                             <span>R$ 79,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
                         </div>
+
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <div class="imagem">
                             <img src="img/Cardapio/Camidas/download.jpg" alt="prato2">
@@ -197,8 +308,12 @@
                                 à base de creme de leite e parmesão. Finalizado com ervas frescas e um toque especial de
                                 queijo.</p>
                             <span>R$ 64,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
                         </div>
+
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <div class="imagem">
                             <img src="img/Cardapio/Camidas/Why serve pasta the ordinary way when you can turn it into a stunning bird’s nest creation_.jpg"
@@ -210,8 +325,12 @@
                                 acompanhado de tomates-cereja frescos e folhas de manjericão. Uma combinação leve,
                                 aromática e equilibrada.</p>
                             <span>R$ 49,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
                         </div>
+
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <div class="imagem">
                             <img src="img/Cardapio/Camidas/Crockpot Steak and Potatoes with Savory Gravy.jpg"
@@ -223,82 +342,164 @@
                             <p>Suculento corte bovino grelhado, servido com batatas douradas e temperadas com ervas
                                 aromáticas. Acompanha molho cremoso especial de pimenta e ervas, proporcionando uma
                                 combinação marcante de sabores.
-
                             </p>
                             <span>R$ 84,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
                         </div>
+
                     </td>
 
                 </tr>
             </table>
 
-            <h1>Doces</h1>
+            <h1 id="doces">--Doces--</h1>
 
-            <table class="cardápio-container" id="doces">
+            <table class="cardápio-container">
+                <tr>
+                    <td>
+                        <div class="imagem">
+                            <img src="img/Sobremesa/17 Chocolate Hazelnut Cake Ideas Nutty Decadent Layers.jpg"
+                                alt="prato1">
+                        </div>
+                        <div class="descrição">
+                            <h3>Brownie de Chocolate com Avelãs</h3>
+                            <p>Brownie artesanal de chocolate com textura macia e interior úmido, coberto com ganache
+                                cremosa de chocolate meio amargo e finalizado com pedaços crocantes de avelãs.
+                            </p>
+                            <span>R$ 24,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imagem">
+                            <img src="img/Sobremesa/BANOFFEE TRIFLES.jpg" alt="prato2">
+                        </div>
+                        <div class="descrição">
+                            <h3>Banoffee Cremosa</h3>
+                            <p>
+                                Sobremesa em camadas com banana fresca, doce de leite artesanal, creme suave e farofa
+                                crocante de biscoito. Finalizada com chantilly e rodelas de banana.
+                            </p>
+                            <span>R$ 22,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
 
-                <td>
-                    <div class="imagem">
-                        <img src="img/Sobremesa/17 Chocolate Hazelnut Cake Ideas Nutty Decadent Layers.jpg"
-                            alt="prato1">
-                    </div>
-                    <div class="descrição">
-                        <h3>Brownie de Chocolate com Avelãs</h3>
-                        <p>Brownie artesanal de chocolate com textura macia e interior úmido, coberto com ganache
-                            cremosa de chocolate meio amargo e finalizado com pedaços crocantes de avelãs.
+                    <td>
+                        <img src="img/Sobremesa/download (4).jpg" alt="prato3">
+                        <div class="descrição">
+                            <h3>Pudim Tradicional com Frutas Vermelhas</h3>
+                            <p>
+                                Pudim artesanal de leite condensado, com textura extremamente cremosa e calda de
+                                caramelo
+                                dourado. Decorado com frutas vermelhas frescas e um toque de hortelã.
+                            </p>
+                            <span>R$ 19,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/Sobremesa/download (5).jpg" alt="prato4">
+                        <div class="descrição">
+                            <h3>Cheesecake de Frutas Vermelhas</h3>
+                            <p> Cheesecake de textura delicada e cremosa, sobre uma base crocante de biscoito
+                                amanteigado.
+                                Coberto com geleia artesanal de frutas vermelhas e acompanhado de morangos e mirtilos
+                                frescos.
+                            </p>
+                            <span>R$ 26,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/Sobremesa/Molten Chocolate Lava Cake 🍫🍨.jpg" alt="prato5">
+                        <div class="descrição">
+                            <h3>Petit Gâteau de Chocolate</h3>
+                            <p> Bolo individual de chocolate com exterior delicadamente assado e interior cremoso de
+                                chocolate derretido. Servido com uma bola de sorvete de creme, morangos frescos e calda
+                                de
+                                chocolate.
 
-                        </p>
-                        <span>R$ 24,90</span>
-                    </div>
-                </td>
+                            </p>
+                            <span>R$ 29,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 
-                <td>
-                    <div class="imagem">
-                        <img src="img/Sobremesa/BANOFFEE TRIFLES.jpg" alt="prato2">
-                    </div>
-                    <div class="descrição">
-                        <h3>Banoffee Cremosa</h3>
-                        <p>
-                            Sobremesa em camadas com banana fresca, doce de leite artesanal, creme suave e farofa
-                            crocante de biscoito. Finalizada com chantilly e rodelas de banana.
-                        </p>
-                        <span>R$ 22,90</span>
-                    </div>
-                </td>
-                <td>
-                    <img src="img/Sobremesa/download (4).jpg" alt="prato3">
-                    <div class="descrição">
-                        <h3>Pudim Tradicional com Frutas Vermelhas</h3>
-                        <p>
-                            Pudim artesanal de leite condensado, com textura extremamente cremosa e calda de caramelo
-                            dourado. Decorado com frutas vermelhas frescas e um toque de hortelã.
-                        </p>
-                        <span>R$ 19,90</span>
-                    </div>
-                </td>
-                <td>
-                    <img src="img/Sobremesa/download (5).jpg" alt="prato4">
-                    <div class="descrição">
-                        <h3>Cheesecake de Frutas Vermelhas</h3>
-                        <p> Cheesecake de textura delicada e cremosa, sobre uma base crocante de biscoito amanteigado.
-                            Coberto com geleia artesanal de frutas vermelhas e acompanhado de morangos e mirtilos
-                            frescos.
+            <h1 id="drinks">--Drinks--</h1>
 
-                        </p>
-                        <span>R$ 26,90</span>
-                    </div>
-                </td>
-                <td>
-                    <img src="img/Sobremesa/Molten Chocolate Lava Cake 🍫🍨.jpg" alt="prato5">
-                    <div class="descrição">
-                        <h3>Petit Gâteau de Chocolate</h3>
-                        <p> Bolo individual de chocolate com exterior delicadamente assado e interior cremoso de
-                            chocolate derretido. Servido com uma bola de sorvete de creme, morangos frescos e calda de
-                            chocolate.
+            <table class="cardápio-container">
+                <tr>
+                    <td>
+                        <div class="imagem">
+                            <img src="img/drinks/D1.png" alt="prato1">
+                        </div>
+                        <div class="descrição">
+                            <h3>Golden Sunset</h3>
+                            <p>Uma mistura sofisticada de laranja, especiarias e notas herbais de alecrim. Seu sabor
+                                equilibrado traz uma experiência marcante e aromática.
 
-                        </p>
-                        <span>R$ 29,90</span>
-                    </div>
-                </td>
+                            </p>
+                            <span>R$ 21,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="imagem">
+                            <img src="img/drinks/D2.png" alt="prato2">
+                        </div>
+                        <div class="descrição">
+                            <h3>Strawberry Breeze</h3>
+                            <p>
+                                Uma combinação refrescante de morango, hortelã e limão, com notas cítricas e um toque de
+                                doçura. Finalizado com frutas frescas e muito gelo.
+                            </p>
+                            <span>R$ 18,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <img src="img/drinks/D3.png" alt="prato3">
+                        <div class="descrição">
+                            <h3>Green Paradise</h3>
+                            <p>
+                                A refrescância da maçã verde encontra o sabor cítrico da laranja em uma bebida leve,
+                                delicada e levemente adocicada. Uma explosão de frescor a cada gole.
+                            </p>
+                            <span>R$ 19,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="img/drinks/D4.png" alt="prato4">
+                        <div class="descrição">
+                            <h3>Citrus Velvet</h3>
+                            <p> Uma mistura cremosa de frutas cítricas com equilíbrio entre o doce e o azedinho. Sua
+                                espuma suave e finalização com laranja desidratada tornam cada detalhe especial.
+
+                            </p>
+                            <span>R$ 20,90</span>
+                            <button><a href="">Adicionar pedido</a></button>
+                        </div>
+                    </td>
+                </tr>
             </table>
         </div>
     </section>
