@@ -27,7 +27,7 @@
             z-index: 1000;
         }
 
-        /* descrição e preços */
+        /* descricão e precos */
         p,
         span {
             color: #424243;
@@ -59,22 +59,28 @@
             border-radius: 20px;
             cursor: pointer;
             border: none;
-            transition: background-color 1.0s ease;
-        }
-
-        .menu button:hover {
-            background-color: #80664E;
+            background-color: transparent;
         }
 
         .menu button a {
-
+            position: relative;
             color: #49382C;
             text-decoration: none;
-            border-radius: 999px;
         }
 
-        .menu button a:hover {
-            color: #F5F4F2;
+        .menu button a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #BAA88D;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .menu button a:hover::after {
+            width: 100%;
         }
 
         .apresentação {
@@ -227,7 +233,7 @@
         }
 
 
-        .descrição {
+        .descricão {
             flex: 1;
             font-size: 20px;
         }
@@ -269,7 +275,7 @@
     <section class="about">
         <div class="about-text">
             <h1>Intereçado em nossos serviços?</h1>
-            <p><button><a href="">Conheça</a></button></p>
+            <p><button><a href="paginas/nosConheça/index.html">Conheça</a></button></p>
         </div>
     </section>
 
@@ -292,7 +298,8 @@
                                 cremoso, acompanhado de aspargos frescos e brócolis ao vapor. Finalizado com molho
                                 especial de ervas e especiarias.</p>
                             <span>R$ 79,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <button class="adicionar" data-nome="Filé Mignon ao Molho" data-preco="79.90">Adicionar
+                                pedido</button>
                         </div>
 
                     </td>
@@ -302,13 +309,14 @@
                         <div class="imagem">
                             <img src="img/Cardapio/Camidas/download.jpg" alt="prato2">
                         </div>
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Chicken Alfredo Crocante</h3>
-                            <p>Filé de frango empanado e crocante, acompanhado de fettuccine envolvido em molho Alfredo
+                            <p>Filé de frango empanado e crocante. acompanhado de fettuccine envolvido em molho Alfredo
                                 à base de creme de leite e parmesão. Finalizado com ervas frescas e um toque especial de
                                 queijo.</p>
-                            <span>R$ 64,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 64.90</span>
+                            <button class="adicionar" data-nome="Chicken Alfredo Crocante" data-preco="64.90">Adicionar
+                                pedido</button>
                         </div>
 
                     </td>
@@ -319,13 +327,14 @@
                             <img src="img/Cardapio/Camidas/Why serve pasta the ordinary way when you can turn it into a stunning bird’s nest creation_.jpg"
                                 alt="prato3">
                         </div>
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Spaghetti ao Pesto Mediterrâneo</h3>
-                            <p>Spaghetti preparado com molho pesto artesanal de manjericão, azeite e especiarias,
-                                acompanhado de tomates-cereja frescos e folhas de manjericão. Uma combinação leve,
+                            <p>Spaghetti preparado com molho pesto artesanal de manjericão. azeite e especiarias.
+                                acompanhado de tomates-cereja frescos e folhas de manjericão. Uma combinacão leve.
                                 aromática e equilibrada.</p>
-                            <span>R$ 49,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 49.90</span>
+                            <button class="adicionar" data-nome="Spaghetti ao Pesto" data-preco="49.90">
+                                Adicionar pedido</button>
                         </div>
 
                     </td>
@@ -337,14 +346,15 @@
                                 alt=" prato4">
                         </div>
 
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Steak ao Molho Especial</h3>
-                            <p>Suculento corte bovino grelhado, servido com batatas douradas e temperadas com ervas
-                                aromáticas. Acompanha molho cremoso especial de pimenta e ervas, proporcionando uma
-                                combinação marcante de sabores.
+                            <p>Suculento corte bovino grelhado. servido com batatas douradas e temperadas com ervas
+                                aromáticas. Acompanha molho cremoso especial de pimenta e ervas. proporcionando uma
+                                combinacão marcante de sabores.
                             </p>
-                            <span>R$ 84,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 84.90</span>
+                            <button class="adicionar" data-nome="Steak ao Molho Especial" data-preco="84.90">Adicionar
+                                pedido</button>
                         </div>
 
                     </td>
@@ -361,13 +371,14 @@
                             <img src="img/Sobremesa/17 Chocolate Hazelnut Cake Ideas Nutty Decadent Layers.jpg"
                                 alt="prato1">
                         </div>
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Brownie de Chocolate com Avelãs</h3>
-                            <p>Brownie artesanal de chocolate com textura macia e interior úmido, coberto com ganache
-                                cremosa de chocolate meio amargo e finalizado com pedaços crocantes de avelãs.
+                            <p>Brownie artesanal de chocolate com textura macia e interior úmido. coberto com ganache
+                                cremosa de chocolate meio amargo e finalizado com pedacos crocantes de avelãs.
                             </p>
-                            <span>R$ 24,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 24.90</span>
+                            <button class="adicionar" data-nome="Brownie de Chocolate com Avelãs"
+                                data-preco="24.90">Adicionar pedido</button>
                         </div>
                     </td>
                 </tr>
@@ -376,14 +387,15 @@
                         <div class="imagem">
                             <img src="img/Sobremesa/BANOFFEE TRIFLES.jpg" alt="prato2">
                         </div>
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Banoffee Cremosa</h3>
                             <p>
-                                Sobremesa em camadas com banana fresca, doce de leite artesanal, creme suave e farofa
+                                Sobremesa em camadas com banana fresca. doce de leite artesanal. creme suave e farofa
                                 crocante de biscoito. Finalizada com chantilly e rodelas de banana.
                             </p>
-                            <span>R$ 22,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 22.90</span>
+                            <button class="adicionar" data-nome="Banoffee Cremosa" data-preco="22.90">Adicionar
+                                pedido</button>
                         </div>
                     </td>
                 </tr>
@@ -391,46 +403,49 @@
 
                     <td>
                         <img src="img/Sobremesa/download (4).jpg" alt="prato3">
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Pudim Tradicional com Frutas Vermelhas</h3>
                             <p>
-                                Pudim artesanal de leite condensado, com textura extremamente cremosa e calda de
+                                Pudim artesanal de leite condensado. com textura extremamente cremosa e calda de
                                 caramelo
                                 dourado. Decorado com frutas vermelhas frescas e um toque de hortelã.
                             </p>
-                            <span>R$ 19,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 19.90</span>
+                            <button class="adicionar" data-nome="Pudim Tradicional com Frutas Vermelhas"
+                                data-preco="19.90">Adicionar pedido</button>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <img src="img/Sobremesa/download (5).jpg" alt="prato4">
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Cheesecake de Frutas Vermelhas</h3>
-                            <p> Cheesecake de textura delicada e cremosa, sobre uma base crocante de biscoito
+                            <p> Cheesecake de textura delicada e cremosa. sobre uma base crocante de biscoito
                                 amanteigado.
                                 Coberto com geleia artesanal de frutas vermelhas e acompanhado de morangos e mirtilos
                                 frescos.
                             </p>
-                            <span>R$ 26,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 26.90</span>
+                            <button class="adicionar" data-nome="Cheesecake de Frutas Vermelhas"
+                                data-preco="26.90">Adicionar pedido</button>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <img src="img/Sobremesa/Molten Chocolate Lava Cake 🍫🍨.jpg" alt="prato5">
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Petit Gâteau de Chocolate</h3>
                             <p> Bolo individual de chocolate com exterior delicadamente assado e interior cremoso de
-                                chocolate derretido. Servido com uma bola de sorvete de creme, morangos frescos e calda
+                                chocolate derretido. Servido com uma bola de sorvete de creme. morangos frescos e calda
                                 de
                                 chocolate.
 
                             </p>
-                            <span>R$ 29,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 29.90</span>
+                            <button class="adicionar" data-nome="Petit Gâteau de Chocolate" data-preco="29.90">Adicionar
+                                pedido</button>
                         </div>
                     </td>
                 </tr>
@@ -444,14 +459,15 @@
                         <div class="imagem">
                             <img src="img/drinks/D1.png" alt="prato1">
                         </div>
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Golden Sunset</h3>
-                            <p>Uma mistura sofisticada de laranja, especiarias e notas herbais de alecrim. Seu sabor
+                            <p>Uma mistura sofisticada de laranja. especiarias e notas herbais de alecrim. Seu sabor
                                 equilibrado traz uma experiência marcante e aromática.
 
                             </p>
-                            <span>R$ 21,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 21.90</span>
+                            <button class="adicionar" data-nome="Golden Sunset" data-preco="21.90">Adicionar
+                                pedido</button>
                         </div>
                     </td>
                 </tr>
@@ -460,14 +476,15 @@
                         <div class="imagem">
                             <img src="img/drinks/D2.png" alt="prato2">
                         </div>
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Strawberry Breeze</h3>
                             <p>
-                                Uma combinação refrescante de morango, hortelã e limão, com notas cítricas e um toque de
-                                doçura. Finalizado com frutas frescas e muito gelo.
+                                Uma combinacão refrescante de morango. hortelã e limão. com notas cítricas e um toque de
+                                docura. Finalizado com frutas frescas e muito gelo.
                             </p>
-                            <span>R$ 18,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 18.90</span>
+                            <button class="adicionar" data-nome="Strawberry Breeze" data-preco="18.90">Adicionar
+                                pedido</button>
                         </div>
                     </td>
                 </tr>
@@ -475,39 +492,42 @@
 
                     <td>
                         <img src="img/drinks/D3.png" alt="prato3">
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Green Paradise</h3>
                             <p>
-                                A refrescância da maçã verde encontra o sabor cítrico da laranja em uma bebida leve,
+                                A refrescância da macã verde encontra o sabor cítrico da laranja em uma bebida leve.
                                 delicada e levemente adocicada. Uma explosão de frescor a cada gole.
                             </p>
-                            <span>R$ 19,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 19.90</span>
+                            <button class="adicionar" data-nome="Green Paradise" data-preco="19.90">Adicionar
+                                pedido</button>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <img src="img/drinks/D4.png" alt="prato4">
-                        <div class="descrição">
+                        <div class="descricão">
                             <h3>Citrus Velvet</h3>
                             <p> Uma mistura cremosa de frutas cítricas com equilíbrio entre o doce e o azedinho. Sua
-                                espuma suave e finalização com laranja desidratada tornam cada detalhe especial.
+                                espuma suave e finalizacão com laranja desidratada tornam cada detalhe especial.
 
                             </p>
-                            <span>R$ 20,90</span>
-                            <button><a href="">Adicionar pedido</a></button>
+                            <span>R$ 20.90</span>
+                            <button class="adicionar" data-nome="Citrus Velvet" data-preco="20.90">Adicionar
+                                pedido</button>
                         </div>
                     </td>
                 </tr>
             </table>
         </div>
-    </section>
-
-    <section>
 
     </section>
 
+    <script src="script.js"></script>
 </body>
+
+
+
 
 </html>
