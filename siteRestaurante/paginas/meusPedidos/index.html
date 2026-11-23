@@ -1,122 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Pedidos</title>
 
+    <link rel="stylesheet" href="stylePg.css">
+
     <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
-
-
-         body {
-            background-color: #F5F4F2;
-            margin: 0;
-            padding: 0;
-            font-family: 'Playfair Display', serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        /* descrição e preços */
-        p,
-        span {
-            color: #424243;
-        }
-
-        /* Fonte dos títulos */
-        h1,
-        h2,
-        h3 {
-            color: #BAB095;
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px;
-        }
-
-        .menu {
-            padding: 15px;
-            justify-self: center;
-            text-align: center;
-            background-color: #F5F4F2;
-            margin: 20px;
-            border-radius: 50px;
-            box-shadow: 14px 14px 14px rgba(0, 0, 0, 0.1);
-            top: 0;
-        }
-
-
-        .menu button {
-            padding: 7px;
-            font-size: 14px;
-            border-radius: 20px;
-            cursor: pointer;
-            border: none;
-            background-color: transparent;
-        }
-
-        .menu button a {
-            position: relative;
-            color: #49382C;
-            text-decoration: none;
-        }
-
-        .menu button a::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: #BAA88D;
-            bottom: -5px;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-
-        .menu button a:hover::after {
-            width: 100%;
-        }
+       
     </style>
 
 </head>
+
 <body>
     <header class="menu">
         <nav class="menu-button">
             <button><a href="../../index.html">HOME</a></button>
-            <button><a href="paginas/nosConheça/index.html">CONHEÇA</a></button>
+
         </nav>
+
     </header>
 
-     <section>
+    <div class="text">
         <h1>Meus Pedidos</h1>
-     </section>
+    </div>
 
     <main>
 
         <section class="pedidos">
 
-            <!-- Aqui o JavaScript vai inserir os pratos -->
-            <div id="lista-pedidos">
+            <div class="tabela">
 
-                <p id="pedido-vazio">
-                    Você ainda não adicionou nenhum prato.
-                </p>
+                <h2>Resumo do seu pedido</h2>
 
-            </div>
+                <div id="lista-pedidos">
 
-            <div class="resumo">
-                <h3>Total: R$ <span id="valor-total">0,00</span></h3>
-            </div>
+                    <p id="pedido-vazio">
+                        Você ainda não adicionou nenhum prato.
+                    </p>
 
-            <div class="finalizar">
-                <button>Finalizar Pedido</button>
+                </div>
+
+                <div class="resumo">
+                    <h3>
+                        Total: R$ <span id="valor-total">0,00</span>
+                    </h3>
+                </div>
+
+                <div class="finalizar">
+                    <button id="finalizar-pedido">Finalizar Pedido</button>
+                </div>
+
             </div>
 
         </section>
